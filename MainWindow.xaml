@@ -16,17 +16,19 @@
 	<Window.Resources>
 		<Style x:Key="MediaElementStyle1" TargetType="{x:Type MediaElement}">
 			<Setter Property="FlowDirection" Value="LeftToRight"/>
-
 		</Style>
 	</Window.Resources>
 	<Grid>
-		<Canvas Background="Transparent">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="181*"/>
+			<ColumnDefinition Width="219*"/>
+		</Grid.ColumnDefinitions>
+		<Canvas Background="Transparent" Grid.ColumnSpan="2">
 			<Viewbox Name="ellipse" >
 				<StackPanel>
 					<Border>
-						<!--<MediaElement x:Name="gifMedia"  MediaEnded="gifMedia_MediaEnded" UnloadedBehavior="Manual"  LoadedBehavior="Play" />-->
 						<MediaElement x:Name="myGif" MediaEnded="myGif_MediaEnded"  UnloadedBehavior="Manual"     
-									  Source="file://C:\Users\yang\Desktop\my_git\WindowsDesktopEffects\GIF\dog\15.gif" LoadedBehavior="Play" Stretch="Fill" Style="{DynamicResource MediaElementStyle1}"  Height="40" Width="40"/>
+									  Source="file:.\Resource\Gif\15.gif" LoadedBehavior="Play" Stretch="Fill" Style="{DynamicResource MediaElementStyle1}"  Height="40" Width="40"/>
 					</Border>
 				</StackPanel>
 			</Viewbox>

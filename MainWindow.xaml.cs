@@ -15,6 +15,8 @@ namespace WindowsDesktopEffects
     /// </summary>
     public partial class MainWindow : Window
     {
+        private MediaElement _media;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -26,6 +28,8 @@ namespace WindowsDesktopEffects
 
             Loaded += MainWindow_Loaded;
         }
+
+
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
