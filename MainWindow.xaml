@@ -13,12 +13,21 @@
 		WindowState="Maximized"
 		ShowInTaskbar="False"
 		>
-    <Grid>
+	<Window.Resources>
+		<Style x:Key="MediaElementStyle1" TargetType="{x:Type MediaElement}">
+			<Setter Property="FlowDirection" Value="LeftToRight"/>
+
+		</Style>
+	</Window.Resources>
+	<Grid>
 		<Canvas Background="Transparent">
 			<Viewbox Name="ellipse" >
 				<StackPanel>
-					<Rectangle Fill="Red"  StrokeThickness="4" Width="20" Height="20"/>
-					<Path Data="M14.98,0.8 L14.04,0 L7.49,6.62 L0.94,0 L0,0.8 L6.63,7.49 L0,14.19 L0.94,14.99 L7.49,8.37 L14.04,14.99 L14.98,14.19 L8.36,7.49 z" Fill="#5e5e5f" Height="35" Stretch="Uniform"  Width="35" ToolTip="LoginGeometry" Canvas.Left="402" Canvas.Top="194"/>
+					<Border>
+						<!--<MediaElement x:Name="gifMedia"  MediaEnded="gifMedia_MediaEnded" UnloadedBehavior="Manual"  LoadedBehavior="Play" />-->
+						<MediaElement x:Name="myGif" MediaEnded="myGif_MediaEnded"  UnloadedBehavior="Manual"     
+									  Source="file://C:\Users\yang\Desktop\my_git\WindowsDesktopEffects\GIF\dog\15.gif" LoadedBehavior="Play" Stretch="Fill" Style="{DynamicResource MediaElementStyle1}"  Height="40" Width="40"/>
+					</Border>
 				</StackPanel>
 			</Viewbox>
 
